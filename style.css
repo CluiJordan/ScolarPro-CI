@@ -1,0 +1,75 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.app-panel {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.clean-input {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    transition: all 0.2s ease;
+}
+.clean-input:focus {
+    background-color: #fff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+/* Table sticky headers */
+th.sticky-col, td.sticky-col { position: sticky; left: 0; z-index: 30; }
+th.sticky-col-end, td.sticky-col-end { position: sticky; right: 0; z-index: 30; }
+
+.sticky-col::after {
+    content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 1px;
+    background: #e2e8f0;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.05);
+}
+.sticky-col-end::before {
+    content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 1px;
+    background: #e2e8f0;
+    box-shadow: -2px 0 4px rgba(0,0,0,0.05);
+}
+
+.table-row-even { background-color: #ffffff; }
+.table-row-odd { background-color: #f8fafc; }
+.table-row:hover { background-color: #eff6ff; }
+
+.brand-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clickable-grade {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.clickable-grade:hover {
+    background-color: #e0f2fe;
+}
