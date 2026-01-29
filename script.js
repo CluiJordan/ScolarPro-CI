@@ -1,8 +1,8 @@
 const SUPABASE_URL = 'https://szhonwbqsemhjwcltscp.supabase.co'; 
-const SUPABASE_ANON_KEY = 'sb_publishable_kSgVa9UGpB4nG23jOQ7aPw_61jegMna'; 
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6aG9ud2Jxc2VtaGp3Y2x0c2NwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk3MDM2NzAsImV4cCI6MjA4NTI3OTY3MH0.s3SwFRQUv4rI2V9qAnoCluoZJQf4iJkCdm-ZeFWPxEY'; 
 
 // Initialisation du client
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const { useState, useEffect, useMemo, useRef } = React;
 
